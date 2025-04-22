@@ -1,0 +1,203 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-04-21T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2024.2.0",
+  "resources": [
+    {
+      "_id": "env_base",
+      "parentId": "wrk_1",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Base Environment",
+      "description": "",
+      "type": "environment",
+      "data": {
+        "base_url": "http://localhost:3001/api"
+      }
+    },
+    {
+      "_id": "req_tasks_get_all",
+      "parentId": "fld_tasks",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Get All Tasks",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/tasks",
+      "method": "GET"
+    },
+    {
+      "_id": "req_tasks_create",
+      "parentId": "fld_tasks",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Create Task",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/tasks",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Nova Tarefa\",\n  \"description\": \"Descrição da tarefa\",\n  \"status\": \"todo\",\n  \"position\": 0,\n  \"column_id\": 1\n}"
+      }
+    },
+    {
+      "_id": "req_tasks_get_by_id",
+      "parentId": "fld_tasks",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Get Task by ID",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/tasks/:id",
+      "method": "GET"
+    },
+    {
+      "_id": "req_tasks_update",
+      "parentId": "fld_tasks",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Update Task",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/tasks/:id",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Tarefa Atualizada\",\n  \"description\": \"Nova descrição\",\n  \"status\": \"in_progress\",\n  \"position\": 1,\n  \"column_id\": 2\n}"
+      }
+    },
+    {
+      "_id": "req_tasks_delete",
+      "parentId": "fld_tasks",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Delete Task",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/tasks/:id",
+      "method": "DELETE"
+    },
+    {
+      "_id": "req_tasks_update_position",
+      "parentId": "fld_tasks",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Update Task Position",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/tasks/:id/position",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"position\": 2,\n  \"column_id\": 3\n}"
+      }
+    },
+    {
+      "_id": "req_columns_get_all",
+      "parentId": "fld_columns",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Get All Columns",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/columns",
+      "method": "GET"
+    },
+    {
+      "_id": "req_columns_create",
+      "parentId": "fld_columns",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Create Column",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/columns",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Nova Coluna\",\n  \"position\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_columns_get_by_id",
+      "parentId": "fld_columns",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Get Column by ID",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/columns/:id",
+      "method": "GET"
+    },
+    {
+      "_id": "req_columns_update",
+      "parentId": "fld_columns",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Update Column",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/columns/:id",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Coluna Atualizada\",\n  \"position\": 1\n}"
+      }
+    },
+    {
+      "_id": "req_columns_delete",
+      "parentId": "fld_columns",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Delete Column",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/columns/:id",
+      "method": "DELETE"
+    },
+    {
+      "_id": "req_columns_update_position",
+      "parentId": "fld_columns",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Update Column Position",
+      "description": "",
+      "type": "request",
+      "url": "{{ _.base_url }}/columns/:id/position",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"position\": 2\n}"
+      }
+    },
+    {
+      "_id": "fld_tasks",
+      "parentId": "wrk_1",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Tasks",
+      "description": "",
+      "type": "request_group"
+    },
+    {
+      "_id": "fld_columns",
+      "parentId": "wrk_1",
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Columns",
+      "description": "",
+      "type": "request_group"
+    },
+    {
+      "_id": "wrk_1",
+      "parentId": null,
+      "modified": 1713657600000,
+      "created": 1713657600000,
+      "name": "Kanban API",
+      "description": "",
+      "type": "workspace"
+    }
+  ]
+} 
