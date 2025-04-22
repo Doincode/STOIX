@@ -1,7 +1,7 @@
 # Kanban Task Manager
 
 A full-stack task management application with a Kanban board interface, built with Next.js, Express, and PostgreSQL.
-
+Portuguese Introduction >  (vídeo de apresentação: https://www.loom.com/share/e74e8f8fe6b545a9b23f40ebc0b494c2?sid=01e781af-e22b-4c55-911b-1141647059e6)
 ## Features
 
 - Task management with CRUD operations
